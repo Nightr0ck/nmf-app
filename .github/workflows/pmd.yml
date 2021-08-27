@@ -7,6 +7,7 @@ jobs:
     name: PMD Static Code Analysis
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: sfdx-actions/setup-pmd@v1
       - name: run-pmd
         run: pmd -d ./app -R ./pmd/codeStyle.xml -f text
