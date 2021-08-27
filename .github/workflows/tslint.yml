@@ -4,14 +4,14 @@ jobs:
   tslint:
     runs-on: ubuntu-latest
     steps:
-      - name: Prepare
-        - uses: actions/checkout@v1
-        - uses: borales/actions-yarn@v2.0.0
-          with:
-            cmd: install 
-        - uses: borales/actions-yarn@v2.0.0
-          with:
-            cmd: ci
+      - uses: actions/checkout@v1
+      - name: Prepare  
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install 
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: ci
       - name: Lint
         uses: mooyoul/tslint-actions@v1.1.1
         with:
