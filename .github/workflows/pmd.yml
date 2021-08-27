@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: sfdx-actions/setup-pmd@v1
       - name: run-pmd
-        run: pmd -d ./app -R ./pmd/codeStyle.xml -f text
+        run: pmd -d ./app/navigation/Navigator -R ./pmd/codeStyle.xml -f text
 
 # https://github.com/marketplace/actions/pmd-source-code-analyzer-action
 # https://github.com/marketplace/actions/pmd-analyser
