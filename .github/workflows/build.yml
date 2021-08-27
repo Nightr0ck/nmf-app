@@ -14,5 +14,6 @@ jobs:
           expo-version: 4.x
           username: ${{ secrets.EXPO_CLI_USERNAME }}
           password: ${{ secrets.EXPO_CLI_PASSWORD }}
+      - run: pwd
       - run: yarn install
       - run: expo build:android -t app-bundle
