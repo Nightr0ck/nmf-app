@@ -24,7 +24,7 @@ const ListItem = ({ title, onPress, showTopLine, showBottomLine }: Props) => {
   if (showBottomLine) {
     containerStyle.push(styles.bottomLine);
   }
-//test
+  
   return (
     <TouchableOpacity onPress={onPress} style={containerStyle}>
       <Text.Secondary numberOfLines={1}>{title}</Text.Secondary>
