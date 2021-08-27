@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./app",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./app --fix",
     "typescript": "tsc --noEmit",
-    "ci": "yarn lint && yarn typescript && yarn test --coverage",
+    "ci": "yarn lint && yarn typescript && yarn test -u && yarn test --coverage",
     "storybook": "start-storybook -p 7007",
     "prestorybook": "rnstl"
   },
