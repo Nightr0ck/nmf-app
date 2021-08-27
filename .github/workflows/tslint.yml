@@ -13,5 +13,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config: ./.github/workspace/tslint.json
-          project: ./app
+          project: ./app/*
           pattern: '*.ts[x]*'
