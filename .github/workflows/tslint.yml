@@ -4,9 +4,10 @@ jobs:
   tslint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - run: ls -l
-      - uses: borales/actions-yarn@v2.0.0
+      - name: Checkout
+        uses: actions/checkout@v1    
+      - name: Prepare
+        uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install 
       - name: Lint
