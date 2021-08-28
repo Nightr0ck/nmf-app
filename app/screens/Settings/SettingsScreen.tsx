@@ -59,6 +59,10 @@ const SettingsScreen = (props) => {
       title: t("SETTINGS_SCREEN_TERMS_OF_USE"),
       onPress: () => WebBrowser.openBrowserAsync("http://nmf.earth/terms-of-use.pdf"),
     },
+    {
+      title: "Change Language",
+      onPress: () => Linking.openURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
+    },
   ];
   const [steps, setSteps] = useState(0);
 
