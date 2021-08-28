@@ -9,10 +9,10 @@ jobs:
         with:
           cmd: install 
       - name: Lint
-        run: ls -l
-        uses: mooyoul/tslint-actions@v1.1.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          config: ./.github/workspace/tslint.json
-          project: ./app/*
-          pattern: '*.ts[x]*'
+        - run: ls -l
+        - uses: mooyoul/tslint-actions@v1.1.1
+          with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            config: ./.github/workspace/tslint.json
+            project: ./app/*
+            pattern: '*.ts[x]*'
