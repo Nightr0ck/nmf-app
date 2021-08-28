@@ -4,15 +4,15 @@ jobs:
   tslint:
     runs-on: ubuntu-latest
     steps:
+      - run: ls -l
       - uses: actions/checkout@v1
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install 
       - name: Lint
-        - run: ls -l
-        - uses: mooyoul/tslint-actions@v1.1.1
-          with:
-            token: ${{ secrets.GITHUB_TOKEN }}
-            config: ./.github/workspace/tslint.json
-            project: ./app/*
-            pattern: '*.ts[x]*'
+        uses: mooyoul/tslint-actions@v1.1.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config: ./.github/workspace/tslint.json
+          project: ./app/*
+          pattern: '*.ts[x]*'
