@@ -4,8 +4,8 @@ jobs:
   tslint:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -l
       - uses: actions/checkout@v1
+      - run: ls -l
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install 
