@@ -1,7 +1,4 @@
 name: New Release
-
-#on: [push, pull_request]
-
 on:
   workflow_run:
     workflows: ["Expo Build"]
@@ -19,7 +16,7 @@ jobs:
         id: create_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.run_number }}
           release_name: Release ${{ github.run_number }}
@@ -29,13 +26,3 @@ jobs:
             - Second Change
           draft: false
           prerelease: false
-  
-  build-failed:
-    name: Build failed
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Run a one-line script
-        run: echo Build failed
